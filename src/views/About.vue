@@ -7,7 +7,7 @@
 export default {
   name: 'About',
   created () {
-    console.log(window.a.d)
+    console.log(window.a.e)
   }
 }
 </script>

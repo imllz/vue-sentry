@@ -8,7 +8,7 @@ import { Vue as VueIntegration } from '@sentry/integrations'
 Sentry.init({
   dsn: 'https://26529f7459da4a9ab803cff4cf4d2000@o416729.ingest.sentry.io/5312911',
   integrations: [new VueIntegration({ Vue, attachProps: true })],
-  release: '1.0.2',
+  release: '1.0.3',
   environment: 'production'
 })
 
