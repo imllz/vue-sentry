@@ -12,6 +12,11 @@ Sentry.init({
   environment: 'production'
 })
 
+Sentry.configureScope(function (scope) {
+  scope.setUser({ username: navigator.userAgent })
+  scope.setTag('page_locale', 'de-at')
+})
+
 Vue.config.productionTip = false
 
 new Vue({
