@@ -1,0 +1,10 @@
+[defaults]
+url=https://sentry.io/
+org=private-my
+project=vue-sentry
+
+[auth]
+token=aa633d8f69394b5baed35d74f348ee7ddfb9dd5d4a02434e99d690cb7b8b5d96
+
+[log]
+level=info
