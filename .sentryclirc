@@ -1,10 +1,10 @@
 [defaults]
-url=https://sentry.io/
-org=private-my
-project=vue-sentry
+url=http://localhost:9000/
+org=yidun
+project=vue
 
 [auth]
-token=aa633d8f69394b5baed35d74f348ee7ddfb9dd5d4a02434e99d690cb7b8b5d96
+token=00dda949a49d4095b23362eb2fba703a30c5fabdd59b4fff8d73d5852328d812
 
 [log]
 level=info

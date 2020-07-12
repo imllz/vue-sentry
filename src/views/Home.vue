@@ -1,18 +1,32 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <button @click="handleClick">fetch</button>
+    <button @click="promiseError">promiseError</button>
+    <button @click="consoleError">consoleError</button>
+    <button @click="sendSentryEvent">sendSentryEvent</button>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import axios from 'axios'
+import sendSentryEvent from '@/helpers/sentryEvent'
 
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
+  methods: {
+    handleClick () {
+      axios.get('/api/test', { timeout: 200 })
+    },
+    promiseError () {
+      Promise.reject(new Error('promiseError'))
+    },
+    consoleError () {
+      console.error('consoleError')
+      console.info('consoleError')
+    },
+    sendSentryEvent () {
+      sendSentryEvent()
+    }
   }
 }
 </script>
